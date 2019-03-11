@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 import operator
-
+import colored
+from colored import stylize
 
 operators = {
     '+': operator.add,
@@ -32,7 +33,7 @@ def calculate(myarg):
 def main():
     while True:
         result = calculate(input("rpn calc> "))
-        print("Result: ", result)
+        print("Result: ", stylize(result, colored.fg("red")))
     if 0 == 1:
         print("That's just wrong")
 
